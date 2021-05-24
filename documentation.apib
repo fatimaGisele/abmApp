@@ -1,0 +1,195 @@
+FORMAT: 1A
+
+#ABM APP- ALKEMY'S CHALLENGE
+
+#Group USERS
+
+##User collection [/] 
+
+### Crear un nuevo usuario [POST]
+Desde aqui se puede ingresar al registro 
+para poder crear un nuevo usuario
+
++ Response 201 (application/json)
+
+[
+    {
+    "name": "string",
+    "mail": "string",
+    "password": "string"
+    }
+]
+
++ Response 404 (application/json)
+
+[
+    {"message": "mail en uso"}
+]
+
++ Response 500 (application/json)
+
+[
+    {"message": "ocurrio un error"}
+]
+
+##User collection [/login] 
+
+### Login del usuario [POST]
+Desde aqui se puede ingresar al loguin 
+para poder ingresar a nuestros gastos
+ y modificarlos.
+
++ Response 201 (application/json)
+
+[
+    {
+    "mail": "string",
+    "password": "string"
+    }
+]
+
++ Response 404 (application/json)
+
+[
+    {"message": "usuario y/o contraseña incorrectos"}
+]
+
++ Response 500 (application/json)
+
+[
+    {"message": "ocurrio un error"}
+]
+
+#Group EXPENSES
+
+##EXPENSES collection [/myExpenses] 
+
+###Muestra los montos  [GET]
+Desde aqui se puede acceder al registro 
+de nuestros movimientos
+
++ Response 201 (application/json)
+
+[
+    {
+    "mail": "string",
+    "password": "string"
+    }
+]
+
++ Response 404 (application/json)
+
+[
+    {"message": "usuario y/o contraseña incorrectos"}
+]
+
++ Response 500 (application/json)
+
+[
+    {"message": "ocurrio un error"}
+]
+
+##EXPENSES collection [/myExpenses/:id] 
+
+###Busca un movimiento  [GET]
+Desde aqui se puede buscar un movimiento en particular
+
++ Response 201 (application/json)
+
+[
+    {
+    "mail": "string",
+    "password": "string"
+    }
+]
+
++ Response 404 (application/json)
+
+[
+    {"message": "usuario y/o contraseña incorrectos"}
+]
+
++ Response 500 (application/json)
+
+[
+    {"message": "ocurrio un error"}
+]
+
+##EXPENSES collection [/myExpenses/:id] 
+
+###Agregar un monto  [PUT]
+Desde aqui se puede agregar un monto a nuestra cuenta
+
++ Response 201 (application/json)
+
+[
+    {
+    "mail": "string",
+    "password": "string"
+    }
+]
+
++ Response 404 (application/json)
+
+[
+    {"message": "usuario y/o contraseña incorrectos"}
+]
+
++ Response 500 (application/json)
+
+[
+    {"message": "ocurrio un error"}
+]
+
+##EXPENSES collection [/myExpenses/:id] 
+
+###Restar un monto  [PUT]
+Desde aqui se puede restar un monto a nuestra cuenta
+
++ Response 201 (application/json)
+
+[
+    {
+    "mail": "string",
+    "password": "string"
+    }
+]
+
++ Response 404 (application/json)
+
+[
+    {"message": "usuario y/o contraseña incorrectos"}
+]
+
++ Response 500 (application/json)
+
+[
+    {"message": "ocurrio un error"}
+]
+
+##EXPENSES collection [/myExpenses/:id] 
+
+###Eliminar nuesta cuenta de gastos  [DELETE]
+Desde aqui se puede eliminar nuesta cuenta y todos los 
+registros.
+
++ Response 201 (application/json)
+
+[
+    {
+    "mail": "string",
+    "password": "string"
+    }
+]
+
++ Response 404 (application/json)
+
+[
+    {"message": "usuario y/o contraseña incorrectos"}
+]
+
++ Response 500 (application/json)
+
+[
+    {"message": "ocurrio un error"}
+]
