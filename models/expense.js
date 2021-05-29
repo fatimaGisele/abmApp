@@ -8,6 +8,10 @@ Expense.init({
     primaryKey: true,
     autoIncrement: true
   },
+  concept: {
+    type: DataTypes.STRING,
+    allowNull: false  
+  },
   amount: {
     type: DataTypes.INTEGER,
     allowNull: false

@@ -6,6 +6,7 @@ const logger = require('morgan');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
+const cors = require('cors');
 const app = express();
 
 
@@ -14,6 +15,7 @@ const { dbConnection } = require("./database/db");
 require('./database/association');
 dbConnection();
 const auth = require('./routes/auth');
+const homeExpense = require('./routes/homeExpense');
 const userExpenseController = require('./routes/expenseController');
 
 
@@ -24,10 +26,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(bodyParser.json);
-
+app.use(cors());
 
 app.use('/', auth);
-app.use('/myExpenses',validateId, userExpenseController);
+app.use('/home',validateId, userExpenseController);
+app.use('/home/myExpense',validateId, homeExpense);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
